@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage cafÃ© orders for CafeWave including status updates and actions." />
+    <title>Orders | Admin | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light admin-layout">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="sidebar-header">
+        <a class="logo" href="../index.html">
+          <img src="../assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          <img src="../assets/icons/dashboard.svg" alt="" aria-hidden="true" />
+          Dashboard
+        </a>
+        <a class="nav-link is-active" href="orders.html">
+          <img src="../assets/icons/orders.svg" alt="" aria-hidden="true" />
+          Orders
+        </a>
+        <a class="nav-link" href="reservations.html">
+          <img src="../assets/icons/calendar.svg" alt="" aria-hidden="true" />
+          Reservations
+        </a>
+        <a class="nav-link" href="menu-management.html">
+          <img src="../assets/icons/menu-manage.svg" alt="" aria-hidden="true" />
+          Menu Management
+        </a>
+        <a class="nav-link" href="customers.html">
+          <img src="../assets/icons/users.svg" alt="" aria-hidden="true" />
+          Customers
+        </a>
+        <a class="nav-link" href="messages.html">
+          <img src="../assets/icons/messages.svg" alt="" aria-hidden="true" />
+          Messages
+        </a>
+        <a class="nav-link" href="reviews.html">
+          <img src="../assets/icons/reviews.svg" alt="" aria-hidden="true" />
+          Reviews
+        </a>
+        <a class="nav-link" href="settings.html">
+          <img src="../assets/icons/settings.svg" alt="" aria-hidden="true" />
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-header">
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+        <h1>Orders</h1>
+        <div class="admin-actions">
+          <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
+            <img src="../assets/icons/moon.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <img src="../assets/icons/bell.svg" alt="" aria-hidden="true" />
+            <span class="badge">2</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section class="card">
+          <header class="card-header">
+            <div>
+              <h2>Order Queue</h2>
+              <p>Track incoming orders, update statuses, and manage fulfillment.</p>
+            </div>
+            <div class="table-controls">
+              <select>
+                <option value="today" selected>Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="week">Last 7 days</option>
+              </select>
+              <div class="filter-buttons">
+                <button class="chip is-active">All</button>
+                <button class="chip">In Prep</button>
+                <button class="chip">Ready</button>
+                <button class="chip">Completed</button>
+              </div>
+            </div>
+          </header>
+          <table class="table" data-table="orders">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Placed</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#4821</td>
+                <td>Jamie R.</td>
+                <td>Velvet Cold Brew x2</td>
+                <td>$11.50</td>
+                <td><span class="badge status-ready">Ready</span></td>
+                <td>5 min ago</td>
+                <td>
+                  <button class="btn btn-small">Complete</button>
+                  <button class="btn btn-small btn-outline">Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#4819</td>
+                <td>Priya L.</td>
+                <td>Matcha Latte x1</td>
+                <td>$5.95</td>
+                <td><span class="badge status-prep">In Prep</span></td>
+                <td>12 min ago</td>
+                <td>
+                  <button class="btn btn-small">Ready</button>
+                  <button class="btn btn-small btn-outline">Details</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#4816</td>
+                <td>Alex T.</td>
+                <td>Catering - Espresso Cart</td>
+                <td>$780.00</td>
+                <td><span class="badge status-scheduled">Scheduled</span></td>
+                <td>1 hour ago</td>
+                <td>
+                  <button class="btn btn-small">Confirm</button>
+                  <button class="btn btn-small btn-outline">Message</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#4813</td>
+                <td>Avery B.</td>
+                <td>Garden Avocado Toast x1</td>
+                <td>$8.75</td>
+                <td><span class="badge status-completed">Completed</span></td>
+                <td>2 hours ago</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

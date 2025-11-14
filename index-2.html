@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Experience the ambiance of CafeWave with events, stories, and handcrafted menu favorites." />
+    <title>CafeWave | Neighborhood Roastery & Gathering Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light layout-alt">
+    <header class="site-header">
+      <div class="container header-container">
+        <a class="logo" href="index.html">
+          <img src="assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <nav class="site-nav" data-nav>
+          <ul>
+            <li class="nav-dropdown" data-dropdown>
+              <button class="nav-dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+                Home
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">Home Main</a></li>
+                <li><a href="index-2.html" class="is-active">Home Alt</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+            <img src="assets/icons/moon.svg" alt="Toggle dark mode" />
+          </button>
+          <a class="btn btn-outline" href="reservation.html">Reserve</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-ambiance" data-slider="hero">
+        <div class="hero-media hero-video">
+          <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=1600&q=80">
+            <source src="https://cdn.coverr.co/videos/coverr-pouring-coffee-1679414888815?download=1" type="video/mp4" />
+          </video>
+        </div>
+        <div class="container hero-content">
+          <span class="eyebrow">Neighborhood Gathering Place</span>
+          <h1>Inside the Warm Glow of CafeWave</h1>
+          <p>Breathe in the aroma, hear the vinyl spinning, and settle into a corner chair built for lingering conversations.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="services.html">Plan an Event</a>
+            <a class="btn btn-secondary" href="blog.html">Read Our Journal</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-blog" id="stories">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Latest from the Journal</h2>
+            <p>Stories, events, and brewing notes from the heart of the café.</p>
+          </div>
+          <div class="grid grid-three card-grid">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=700&q=80" alt="Barista pouring latte art" loading="lazy" />
+              <div class="card-body">
+                <h3>Behind the Beans: Our Single Origin Lineup</h3>
+                <p>We sat down with our roasting team to talk flavor profiles from Guatemala to Ethiopia—and how we roast each bean.</p>
+                <a class="link-arrow" href="blog-details.html">Read more</a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=700&q=80" alt="Community event in café" loading="lazy" />
+              <div class="card-body">
+                <h3>Vinyl & V60: Thursday Listening Sessions</h3>
+                <p>Bring your favorite record, we&rsquo;ll supply pour-overs and community vibes. Every Thursday at 7 pm.</p>
+                <a class="link-arrow" href="blog-details.html">View event</a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="Café interior with greenery" loading="lazy" />
+              <div class="card-body">
+                <h3>Designing a Space that Breathes</h3>
+                <p>Learn how we infused biophilic design, reclaimed wood, and local art into the CafeWave experience.</p>
+                <a class="link-arrow" href="blog-details.html">Discover</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-testimonials alt" id="love">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Voices from the Community</h2>
+            <p>Rotating testimonials from regulars, collaborators, and first-time guests.</p>
+          </div>
+          <div class="testimonial-slider" data-slider="testimonials">
+            <button class="slider-arrow prev" data-slider-prev aria-label="Previous testimonial"></button>
+            <div class="slider-track">
+              <article class="testimonial-card" data-slider-item>
+                <p>"They supported our local art collective with a pop-up gallery. It's more than a coffee shop—it's a creative hub."</p>
+                <div class="author">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Artist portrait" loading="lazy" />
+                  <div>
+                    <h3>Alex T.</h3>
+                    <span>Mixed-Media Artist</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card" data-slider-item>
+                <p>"Our remote team meets here weekly. The coffee is impeccable, the Wi-Fi is fast, and the atmosphere keeps us inspired."</p>
+                <div class="author">
+                  <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?auto=format&fit=crop&w=200&q=80" alt="Customer portrait" />
+                  <div>
+                    <h3>Jamie R.</h3>
+                    <span>Startup Founder</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial-card" data-slider-item>
+                <p>"They roast with intention and transparency. Knowing the farmer behind my brew makes every sip meaningful."</p>
+                <div class="author">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Customer portrait" loading="lazy" />
+                  <div>
+                    <h3>Kaila S.</h3>
+                    <span>Coffee Educator</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <button class="slider-arrow next" data-slider-next aria-label="Next testimonial"></button>
+            <div class="slider-dots" data-slider-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-about alt" id="about">
+        <div class="container grid grid-two">
+          <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Founders collaborating in cafe" loading="lazy" />
+          </div>
+          <div class="section-content">
+            <h2>Anchored in Craft & Care</h2>
+            <p>We&rsquo;re a tight crew of roasters, bakers, and storytellers intent on elevating everyday rituals. Sustainability is our default, transparency our compass, and hospitality our love language.</p>
+            <p>From sourcing to service, we pursue meaningful connections with the people behind every product and every pour.</p>
+            <a class="btn btn-outline" href="about.html">Meet the team</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-menu alt" id="menu-preview">
+        <div class="container">
+          <div class="section-heading">
+            <h2>On the Bar This Week</h2>
+            <p>A rotating lineup of seasonal creations and guest roasters.</p>
+          </div>
+          <div class="menu-preview">
+            <article class="menu-card horizontal">
+              <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=450&q=80" alt="Winter citrus cortado" loading="lazy" />
+              <div>
+                <h3>Winter Citrus Cortado</h3>
+                <p>Espresso, blood orange syrup, steamed oat milk, candied zest.</p>
+                <span class="price">$5.25</span>
+              </div>
+            </article>
+            <article class="menu-card horizontal">
+              <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=450&q=80" alt="Pacific matcha latte" loading="lazy" />
+              <div>
+                <h3>Pacific Matcha Latte</h3>
+                <p>Ceremonial matcha, lavender honey, coconut crema, edible flowers.</p>
+                <span class="price">$5.95</span>
+              </div>
+            </article>
+            <article class="menu-card horizontal">
+              <img src="https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=450&q=80" alt="Smoked sea salt kouign-amann" loading="lazy" />
+              <div>
+                <h3>Smoked Sea Salt Kouign-Amann</h3>
+                <p>Laminated pastry baked crisp, layered with smoked sea salt caramel.</p>
+                <span class="price">$4.95</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-primary">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/icons/logo-mark.svg" alt="CafeWave logo" />
+            <span>CafeWave</span>
+          </a>
+          <p>Brewing joy since 2012. Community-first, sustainably sourced, and always handcrafted.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Follow on Instagram">
+              <img src="assets/icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Follow on Facebook">
+              <img src="assets/icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Follow on TikTok">
+              <img src="assets/icons/tiktok.svg" alt="TikTok" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Visit</h4>
+          <ul class="footer-list">
+            <li><a href="https://maps.google.com" target="_blank" rel="noopener">123 Brew Lane, Portland, OR</a></li>
+            <li><a href="tel:+15034445566">(503) 444-5566</a></li>
+            <li><a href="mailto:hello@cafewave.co">hello@cafewave.co</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Hours</h4>
+          <ul class="footer-list">
+            <li>Weekdays: 7:00am - 7:00pm</li>
+            <li>Saturday: 8:00am - 8:00pm</li>
+            <li>Sunday: 8:00am - 6:00pm</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-list">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="pricing.html">Subscriptions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p><span data-year></span> CafeWave. Crafted with heart and fair-trade beans.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

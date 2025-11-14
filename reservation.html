@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reserve a table or book a private experience at CafeWave." />
+    <title>Reservation | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light">
+    <header class="site-header site-header--solid">
+      <div class="container header-container">
+        <a class="logo" href="index.html">
+          <img src="assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <nav class="site-nav" data-nav>
+          <ul>
+            <li class="nav-dropdown" data-dropdown>
+              <button class="nav-dropdown-toggle" type="button" data-dropdown-toggle aria-expanded="false">
+                Home
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">Home Main</a></li>
+                <li><a href="index-2.html">Home Alt</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="reservation.html" class="is-active">Reserve</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+            <img src="assets/icons/moon.svg" alt="Toggle dark mode" />
+          </button>
+          <a class="btn btn-outline" href="reservation.html">Reserve</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Reservation</span>
+          <h1>Reserve Your Table</h1>
+          <p>Secure your spot for intimate gatherings, work sessions, and special celebrations.</p>
+        </div>
+      </section>
+
+      <section class="section section-reservation">
+        <div class="container grid grid-two">
+          <div class="reservation-card">
+            <h2>Reservation Details</h2>
+            <form class="form" data-form="reservation">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="res-name">Name</label>
+                  <input id="res-name" type="text" name="name" placeholder="Full name" required />
+                </div>
+                <div class="form-group">
+                  <label for="res-email">Email</label>
+                  <input id="res-email" type="email" name="email" placeholder="you@email.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="res-phone">Phone</label>
+                  <input id="res-phone" type="tel" name="phone" placeholder="(503) 123-4567" required />
+                </div>
+                <div class="form-group">
+                  <label for="res-guests">Guests</label>
+                  <input id="res-guests" type="number" name="guests" min="1" max="12" value="2" required />
+                </div>
+                <div class="form-group">
+                  <label for="res-date">Date</label>
+                  <input id="res-date" type="date" name="date" required />
+                </div>
+                <div class="form-group">
+                  <label for="res-time">Time</label>
+                  <input id="res-time" type="time" name="time" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="res-table">Table Preference</label>
+                <select id="res-table" name="table">
+                  <option value="">Select a table</option>
+                  <option value="window">Window Nook (2-4 guests)</option>
+                  <option value="communal">Communal Table (4-8 guests)</option>
+                  <option value="vinyl">Vinyl Lounge (2-6 guests)</option>
+                  <option value="garden">Garden Patio (seasonal)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="res-notes">Notes</label>
+                <textarea id="res-notes" name="notes" rows="4" placeholder="Dietary requests, celebrations, themes, etc."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Reserve Now</button>
+            </form>
+          </div>
+          <div class="reservation-info">
+            <h2>What to Expect</h2>
+            <p>Our concierge will confirm within 12 hours and tailor the experience to your preferences. For larger groups or private events, explore our <a href="services.html">Services</a> offerings.</p>
+            <ul class="reservation-tips">
+              <li>Reservations held for 15 minutes past start time.</li>
+              <li>Cancellation policy: 6 hours notice for full refund of deposit.</li>
+              <li>Need a different time? Email <a href="mailto:events@3degree.cafe">events@3degree.cafe</a>.</li>
+            </ul>
+            <div class="reservation-gallery" data-slider="reservation">
+              <div class="slider-track">
+                <figure>
+                  <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Communal table setup" />
+                </figure>
+                <figure>
+                  <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=600&q=80" alt="Pour over bar" />
+                </figure>
+                <figure>
+                  <img src="https://images.unsplash.com/photo-1527169402691-feff5539e52c?auto=format&fit=crop&w=600&q=80" alt="Seasonal drinks" />
+                </figure>
+              </div>
+              <div class="slider-dots" data-slider-dots></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-primary">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img src="assets/icons/logo-mark.svg" alt="CafeWave logo" />
+            <span>CafeWave</span>
+          </a>
+          <p>Brewing joy since 2012. Community-first, sustainably sourced, and always handcrafted.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Follow on Instagram">
+              <img src="assets/icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Follow on Facebook">
+              <img src="assets/icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Follow on TikTok">
+              <img src="assets/icons/tiktok.svg" alt="TikTok" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Visit</h4>
+          <ul class="footer-list">
+            <li><a href="https://maps.google.com" target="_blank" rel="noopener">123 Brew Lane, Portland, OR</a></li>
+            <li><a href="tel:+15034445566">(503) 444-5566</a></li>
+            <li><a href="mailto:hello@cafewave.co">hello@cafewave.co</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Hours</h4>
+          <ul class="footer-list">
+            <li>Weekdays: 7:00am - 7:00pm</li>
+            <li>Saturday: 8:00am - 8:00pm</li>
+            <li>Sunday: 8:00am - 6:00pm</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-list">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="pricing.html">Subscriptions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p><span data-year></span> CafeWave. Crafted with heart and fair-trade beans.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

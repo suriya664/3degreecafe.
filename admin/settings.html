@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin settings for CafeWave including profile, site, and preferences." />
+    <title>Settings | Admin | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light admin-layout">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="sidebar-header">
+        <a class="logo" href="../index.html">
+          <img src="../assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          <img src="../assets/icons/dashboard.svg" alt="" aria-hidden="true" />
+          Dashboard
+        </a>
+        <a class="nav-link" href="orders.html">
+          <img src="../assets/icons/orders.svg" alt="" aria-hidden="true" />
+          Orders
+        </a>
+        <a class="nav-link" href="reservations.html">
+          <img src="../assets/icons/calendar.svg" alt="" aria-hidden="true" />
+          Reservations
+        </a>
+        <a class="nav-link" href="menu-management.html">
+          <img src="../assets/icons/menu-manage.svg" alt="" aria-hidden="true" />
+          Menu Management
+        </a>
+        <a class="nav-link" href="customers.html">
+          <img src="../assets/icons/users.svg" alt="" aria-hidden="true" />
+          Customers
+        </a>
+        <a class="nav-link" href="messages.html">
+          <img src="../assets/icons/messages.svg" alt="" aria-hidden="true" />
+          Messages
+        </a>
+        <a class="nav-link" href="reviews.html">
+          <img src="../assets/icons/reviews.svg" alt="" aria-hidden="true" />
+          Reviews
+        </a>
+        <a class="nav-link is-active" href="settings.html">
+          <img src="../assets/icons/settings.svg" alt="" aria-hidden="true" />
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-header">
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+        <h1>Settings</h1>
+        <div class="admin-actions">
+          <button class="btn btn-small btn-primary">Save Changes</button>
+        </div>
+      </header>
+
+      <main class="admin-content settings-grid">
+        <section class="card">
+          <header>
+            <h2>Profile Settings</h2>
+            <p>Update your admin profile and contact details.</p>
+          </header>
+          <form class="form">
+            <div class="form-group">
+              <label for="profile-name">Full Name</label>
+              <input id="profile-name" type="text" value="Lina Cortez" />
+            </div>
+            <div class="form-group">
+              <label for="profile-email">Email</label>
+              <input id="profile-email" type="email" value="lina@3degree.cafe" />
+            </div>
+            <div class="form-group">
+              <label for="profile-role">Role</label>
+              <input id="profile-role" type="text" value="Head Roaster & Admin" />
+            </div>
+            <div class="form-group">
+              <label for="profile-password">Password</label>
+              <input id="profile-password" type="password" value="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+            </div>
+            <button class="btn btn-outline" type="submit">Update Profile</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <header>
+            <h2>Site Settings</h2>
+            <p>Manage the cafÃ© site configuration and availability.</p>
+          </header>
+          <form class="form">
+            <div class="form-group">
+              <label for="site-name">Site Name</label>
+              <input id="site-name" type="text" value="CafeWave" />
+            </div>
+            <div class="form-group">
+              <label for="site-email">Support Email</label>
+              <input id="site-email" type="email" value="hello@3degree.cafe" />
+            </div>
+            <div class="form-group inline">
+              <div>
+                <label for="site-open">Opening Hour</label>
+                <input id="site-open" type="time" value="07:00" />
+              </div>
+              <div>
+                <label for="site-close">Closing Hour</label>
+                <input id="site-close" type="time" value="20:00" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Online Ordering</label>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <button class="btn btn-outline" type="submit">Update Site</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <header>
+            <h2>Preferences</h2>
+            <p>Customize notifications, theme, and localization.</p>
+          </header>
+          <form class="form">
+            <div class="form-group">
+              <label>Theme</label>
+              <div class="radio-group">
+                <label><input type="radio" name="theme" value="light" checked /> Light</label>
+                <label><input type="radio" name="theme" value="dark" /> Dark</label>
+                <label><input type="radio" name="theme" value="system" /> System</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Notifications</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" checked /> New orders</label>
+                <label><input type="checkbox" checked /> Reservation requests</label>
+                <label><input type="checkbox" /> Marketing emails</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="locale">Locale</label>
+              <select id="locale">
+                <option value="en-US" selected>English (US)</option>
+                <option value="en-GB">English (UK)</option>
+                <option value="es-ES">EspaÃ±ol (ES)</option>
+                <option value="fr-FR">FranÃ§ais (FR)</option>
+              </select>
+            </div>
+            <button class="btn btn-outline" type="submit">Update Preferences</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

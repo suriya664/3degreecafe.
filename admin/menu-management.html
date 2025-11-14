@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage the cafÃ© menu items, categories, and pricing for CafeWave." />
+    <title>Menu Management | Admin | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light admin-layout">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="sidebar-header">
+        <a class="logo" href="../index.html">
+          <img src="../assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          <img src="../assets/icons/dashboard.svg" alt="" aria-hidden="true" />
+          Dashboard
+        </a>
+        <a class="nav-link" href="orders.html">
+          <img src="../assets/icons/orders.svg" alt="" aria-hidden="true" />
+          Orders
+        </a>
+        <a class="nav-link" href="reservations.html">
+          <img src="../assets/icons/calendar.svg" alt="" aria-hidden="true" />
+          Reservations
+        </a>
+        <a class="nav-link is-active" href="menu-management.html">
+          <img src="../assets/icons/menu-manage.svg" alt="" aria-hidden="true" />
+          Menu Management
+        </a>
+        <a class="nav-link" href="customers.html">
+          <img src="../assets/icons/users.svg" alt="" aria-hidden="true" />
+          Customers
+        </a>
+        <a class="nav-link" href="messages.html">
+          <img src="../assets/icons/messages.svg" alt="" aria-hidden="true" />
+          Messages
+        </a>
+        <a class="nav-link" href="reviews.html">
+          <img src="../assets/icons/reviews.svg" alt="" aria-hidden="true" />
+          Reviews
+        </a>
+        <a class="nav-link" href="settings.html">
+          <img src="../assets/icons/settings.svg" alt="" aria-hidden="true" />
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-header">
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+        <h1>Menu Management</h1>
+        <div class="admin-actions">
+          <button class="btn btn-small" data-open-modal="#modal-add-item">
+            <img src="../assets/icons/plus.svg" alt="" aria-hidden="true" />
+            New Item
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section class="card">
+          <header class="card-header">
+            <div>
+              <h2>Menu Items</h2>
+              <p>Create, edit, and organize items by category.</p>
+            </div>
+            <div class="table-controls">
+              <select>
+                <option value="all" selected>All Categories</option>
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="snacks">Snacks</option>
+                <option value="desserts">Desserts</option>
+              </select>
+              <input type="search" placeholder="Search menu" />
+            </div>
+          </header>
+          <table class="table" data-table="menu">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Available</th>
+                <th>Last Updated</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Signature Latte</td>
+                <td>Coffee</td>
+                <td>$5.50</td>
+                <td><span class="badge status-active">Active</span></td>
+                <td>May 12, 2025</td>
+                <td>
+                  <button class="btn btn-small btn-outline" data-open-modal="#modal-edit-item">Edit</button>
+                  <button class="btn btn-small btn-outline btn-danger">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Pacific Matcha Latte</td>
+                <td>Tea</td>
+                <td>$5.95</td>
+                <td><span class="badge status-active">Active</span></td>
+                <td>May 11, 2025</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Edit</button>
+                  <button class="btn btn-small btn-outline btn-danger">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Smoked Sea Salt Kouign-Amann</td>
+                <td>Desserts</td>
+                <td>$4.95</td>
+                <td><span class="badge status-limited">Limited</span></td>
+                <td>May 10, 2025</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Edit</button>
+                  <button class="btn btn-small btn-outline btn-danger">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Garden Avocado Toast</td>
+                <td>Snacks</td>
+                <td>$8.75</td>
+                <td><span class="badge status-active">Active</span></td>
+                <td>May 9, 2025</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Edit</button>
+                  <button class="btn btn-small btn-outline btn-danger">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="modal-add-item" aria-hidden="true">
+      <div class="modal-dialog">
+        <header>
+          <h2>Add Menu Item</h2>
+          <button class="icon-button" data-close-modal aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </header>
+        <form class="form">
+          <div class="form-group">
+            <label for="item-name">Item Name</label>
+            <input id="item-name" type="text" placeholder="Enter item name" required />
+          </div>
+          <div class="form-group">
+            <label for="item-category">Category</label>
+            <select id="item-category" required>
+              <option value="">Select category</option>
+              <option value="coffee">Coffee</option>
+              <option value="tea">Tea</option>
+              <option value="snacks">Snacks</option>
+              <option value="desserts">Desserts</option>
+            </select>
+          </div>
+          <div class="form-group inline">
+            <div>
+              <label for="item-price">Price</label>
+              <input id="item-price" type="number" min="0" step="0.25" placeholder="0.00" required />
+            </div>
+            <div>
+              <label for="item-status">Status</label>
+              <select id="item-status">
+                <option value="active" selected>Active</option>
+                <option value="limited">Limited</option>
+                <option value="soldout">Sold Out</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="item-description">Description</label>
+            <textarea id="item-description" rows="3" placeholder="Flavor notes, ingredients, sourcing"></textarea>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-outline" type="button" data-close-modal>Cancel</button>
+            <button class="btn btn-primary" type="submit">Save Item</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

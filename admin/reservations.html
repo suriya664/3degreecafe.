@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage reservations for CafeWave with guest details and statuses." />
+    <title>Reservations | Admin | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light admin-layout">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="sidebar-header">
+        <a class="logo" href="../index.html">
+          <img src="../assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          <img src="../assets/icons/dashboard.svg" alt="" aria-hidden="true" />
+          Dashboard
+        </a>
+        <a class="nav-link" href="orders.html">
+          <img src="../assets/icons/orders.svg" alt="" aria-hidden="true" />
+          Orders
+        </a>
+        <a class="nav-link is-active" href="reservations.html">
+          <img src="../assets/icons/calendar.svg" alt="" aria-hidden="true" />
+          Reservations
+        </a>
+        <a class="nav-link" href="menu-management.html">
+          <img src="../assets/icons/menu-manage.svg" alt="" aria-hidden="true" />
+          Menu Management
+        </a>
+        <a class="nav-link" href="customers.html">
+          <img src="../assets/icons/users.svg" alt="" aria-hidden="true" />
+          Customers
+        </a>
+        <a class="nav-link" href="messages.html">
+          <img src="../assets/icons/messages.svg" alt="" aria-hidden="true" />
+          Messages
+        </a>
+        <a class="nav-link" href="reviews.html">
+          <img src="../assets/icons/reviews.svg" alt="" aria-hidden="true" />
+          Reviews
+        </a>
+        <a class="nav-link" href="settings.html">
+          <img src="../assets/icons/settings.svg" alt="" aria-hidden="true" />
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-header">
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+        <h1>Reservations</h1>
+        <div class="admin-actions">
+          <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
+            <img src="../assets/icons/moon.svg" alt="" aria-hidden="true" />
+          </button>
+          <button class="icon-button" aria-label="Notifications">
+            <img src="../assets/icons/bell.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section class="card">
+          <header class="card-header">
+            <div>
+              <h2>Upcoming Reservations</h2>
+              <p>Manage confirmation status, guest preferences, and seating.</p>
+            </div>
+            <div class="table-controls">
+              <input type="date" />
+              <select>
+                <option value="all" selected>All Statuses</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="pending">Pending</option>
+                <option value="seated">Seated</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+          </header>
+          <table class="table" data-table="reservations">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Guest</th>
+                <th>Date & Time</th>
+                <th>Guests</th>
+                <th>Table</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#R-2198</td>
+                <td>Kai Chen</td>
+                <td>May 12, 4:30 PM</td>
+                <td>4</td>
+                <td>Garden Patio</td>
+                <td><span class="badge status-confirmed">Confirmed</span></td>
+                <td>Birthday dessert surprise.</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Details</button>
+                  <button class="btn btn-small">Message</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#R-2197</td>
+                <td>Mira Gomez</td>
+                <td>May 12, 6:00 PM</td>
+                <td>6</td>
+                <td>Vinyl Lounge</td>
+                <td><span class="badge status-pending">Pending</span></td>
+                <td>Setup projector for slides.</td>
+                <td>
+                  <button class="btn btn-small">Confirm</button>
+                  <button class="btn btn-small btn-outline">Decline</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#R-2191</td>
+                <td>Northside Architects</td>
+                <td>May 13, 9:00 AM</td>
+                <td>10</td>
+                <td>Communal Table</td>
+                <td><span class="badge status-confirmed">Confirmed</span></td>
+                <td>Gluten-free pastry options.</td>
+                <td>
+                  <button class="btn btn-small btn-outline">Email</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#R-2189</td>
+                <td>Nina Patel</td>
+                <td>May 13, 11:30 AM</td>
+                <td>2</td>
+                <td>Window Nook</td>
+                <td><span class="badge status-seated">Seated</span></td>
+                <td>Anniversary brunch.</td>
+                <td>
+                  <button class="btn btn-small btn-outline">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

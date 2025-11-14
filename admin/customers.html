@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Customer database for CafeWave including orders and last visit." />
+    <title>Customers | Admin | CafeWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/logo-mark.svg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%235C3B2E'/%3E%3Ccircle cx='32' cy='32' r='16' fill='%23F5EFE7'/%3E%3C/svg%3E" />
+  </head>
+  <body class="theme-light admin-layout">
+    <aside class="admin-sidebar" data-admin-sidebar>
+      <div class="sidebar-header">
+        <a class="logo" href="../index.html">
+          <img src="../assets/icons/logo-mark.svg" alt="CafeWave logo" />
+          <span>CafeWave</span>
+        </a>
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="dashboard.html">
+          <img src="../assets/icons/dashboard.svg" alt="" aria-hidden="true" />
+          Dashboard
+        </a>
+        <a class="nav-link" href="orders.html">
+          <img src="../assets/icons/orders.svg" alt="" aria-hidden="true" />
+          Orders
+        </a>
+        <a class="nav-link" href="reservations.html">
+          <img src="../assets/icons/calendar.svg" alt="" aria-hidden="true" />
+          Reservations
+        </a>
+        <a class="nav-link" href="menu-management.html">
+          <img src="../assets/icons/menu-manage.svg" alt="" aria-hidden="true" />
+          Menu Management
+        </a>
+        <a class="nav-link is-active" href="customers.html">
+          <img src="../assets/icons/users.svg" alt="" aria-hidden="true" />
+          Customers
+        </a>
+        <a class="nav-link" href="messages.html">
+          <img src="../assets/icons/messages.svg" alt="" aria-hidden="true" />
+          Messages
+        </a>
+        <a class="nav-link" href="reviews.html">
+          <img src="../assets/icons/reviews.svg" alt="" aria-hidden="true" />
+          Reviews
+        </a>
+        <a class="nav-link" href="settings.html">
+          <img src="../assets/icons/settings.svg" alt="" aria-hidden="true" />
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <div class="admin-main">
+      <header class="admin-header">
+        <button class="sidebar-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+          <img src="../assets/icons/menu.svg" alt="Toggle sidebar" />
+        </button>
+        <h1>Customers</h1>
+        <div class="admin-actions">
+          <input type="search" placeholder="Search customer" />
+          <button class="btn btn-small">Export CSV</button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <section class="card">
+          <table class="table" data-table="customers">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Orders</th>
+                <th>Total Spend</th>
+                <th>Last Visit</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="table-customer">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Customer" />
+                    <div>
+                      <strong>Sofia Moreno</strong>
+                      <span>Member since 2021</span>
+                    </div>
+                  </div>
+                </td>
+                <td>sofia.moreno@email.com</td>
+                <td>112</td>
+                <td>$1,980</td>
+                <td>May 12, 2025</td>
+                <td><span class="badge status-active">Active</span></td>
+                <td>
+                  <button class="btn btn-small btn-outline">View</button>
+                  <button class="btn btn-small btn-outline">Message</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-customer">
+                    <img src="https://images.unsplash.com/photo-1527169402691-feff5539e52c?auto=format&fit=crop&w=200&q=80" alt="Customer" />
+                    <div>
+                      <strong>Andre Foster</strong>
+                      <span>Member since 2022</span>
+                    </div>
+                  </div>
+                </td>
+                <td>andre.foster@email.com</td>
+                <td>86</td>
+                <td>$1,420</td>
+                <td>May 11, 2025</td>
+                <td><span class="badge status-active">Active</span></td>
+                <td>
+                  <button class="btn btn-small btn-outline">View</button>
+                  <button class="btn btn-small btn-outline">Message</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-customer">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="Customer" />
+                    <div>
+                      <strong>Kai Cooper</strong>
+                      <span>Member since 2023</span>
+                    </div>
+                  </div>
+                </td>
+                <td>kai.cooper@email.com</td>
+                <td>45</td>
+                <td>$760</td>
+                <td>May 10, 2025</td>
+                <td><span class="badge status-churn-risk">Churn Risk</span></td>
+                <td>
+                  <button class="btn btn-small btn-primary">Send Offer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-customer">
+                    <img src="https://images.unsplash.com/photo-1514506118964-144810d6106e?auto=format&fit=crop&w=200&q=80" alt="Customer" />
+                    <div>
+                      <strong>Priya Lakshmi</strong>
+                      <span>Member since 2020</span>
+                    </div>
+                  </div>
+                </td>
+                <td>priya.lakshmi@email.com</td>
+                <td>168</td>
+                <td>$2,430</td>
+                <td>May 9, 2025</td>
+                <td><span class="badge status-vip">VIP</span></td>
+                <td>
+                  <button class="btn btn-small btn-outline">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
